@@ -3,19 +3,18 @@ import java.awt.*;
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println("Hello World");
-    System.out.println("Kathryn");
-    
-    Car myCar = new Car(25.5, "1BC32E", Color.BLUE, true);
+    String userInput = "entertainment";                 // hardcode string
+    String uppercased = userInput.toUpperCase();        // call a string method to change to upercase
+    System.out.println(userInput);                      // return "entertainment"
+    System.out.println(uppercased);                     // prints "ENTERTAINMENT"
 
-    Car sallyCar = new Car(13.9, "3D20BN", Color.BLACK, false);
+    char firstCharacter = userInput.charAt(0);          // method to get index 0 of string character
+    System.out.println(firstCharacter);                 // prints "e"
 
-    System.out.println("My Car's License Plate: " + myCar.licensePlate);
-    System.out.println("Sally's License Plate: " + sallyCar.licensePlate);
+    System.out.println("Contains: " + userInput.contains("enter"));     // returns "true"
+    System.out.println("Contains: " + userInput.contains("Enter"));     // returns "false"
 
-    System.out.println(myCar.paintColor.toString());
-    myCar.changePaintColor(Color.RED);
-    System.out.println(myCar.paintColor.toString());
+    System.out.println("Contains: " + userInput.contains("Enter".toLowerCase()));   // returns "true"
 
   }
 }
