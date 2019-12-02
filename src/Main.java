@@ -1,32 +1,33 @@
 import java.awt.*;
-import java.util.Scanner;   // Allows us to get input from users
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
   public static void main(String[] args) {
     
-    // System.out.println("Enter a word:");      // User prompt for input
-    Scanner sc = new Scanner(System.in);      // Constructor method
+    // 31,45,22, 98, 10
+    int[] numbers = new int[5];
 
-    int userNumber = sc.nextInt();
-    System.out.println(userNumber);
-    
-    double userNumber2 = sc.nextDouble();
-    System.out.println(userNumber2);
+    numbers[0] = 31;
+    numbers[1] = 45;
+    numbers[2] = 22;
+    numbers[3] = 98;
+    numbers[4] = 10;
 
-    // String userInput = sc.next();             // Call the next() method to await user input
+    int[] numbers2 = {31, 45, 22, 98, 10};
+    Arrays.sort(numbers);
+    System.out.println(Arrays.toString(numbers));
 
-    // String uppercased = userInput.toUpperCase();        // call a string method to change to upercase
-    // System.out.println(userInput);                      // return "entertainment"
-    // System.out.println(uppercased);                     // prints "ENTERTAINMENT"
+    String[] myFavoriteCandyBars = {"Twix", "Hershey's", "Crunch"};
+    System.out.println("Index 1: " + myFavoriteCandyBars[1]);
 
-    // char firstCharacter = userInput.charAt(0);          // method to get index 0 of string character
-    // System.out.println(firstCharacter);                 // prints "e"
+    myFavoriteCandyBars[2] = "Butterfinger";
+    System.out.println("Index 2: " + myFavoriteCandyBars[2]);
 
-    // System.out.println("Contains: " + userInput.contains("enter"));     // returns "true"
-    // System.out.println("Contains: " + userInput.contains("Enter"));     // returns "false"
+    System.out.println("Length: " + myFavoriteCandyBars.length);    
 
-    // System.out.println("Contains: " + userInput.contains("Enter".toLowerCase()));   // returns "true"
-
+    System.out.println(Array.get(myFavoriteCandyBars, 2));
   }
 }
