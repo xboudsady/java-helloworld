@@ -10,6 +10,19 @@ public class Main {
     double myCarSpeed = 50;
     myCarSpeed = myCar.speedingUp(myCarSpeed);
     
-    System.out.println(myCarSpeed);
+    // System.out.println(myCarSpeed);
+
+   Dog d = new Dog("Doug", 3);
+
+   d.bark();
+
+   int dogYears = d.getDogYears();
+   System.out.println(dogYears + " dog years.");
+
+   d.fetch();
+   d.fetch();
+   d.fetch();
+   d.fetch();
+
   }
 }
