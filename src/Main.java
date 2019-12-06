@@ -10,16 +10,13 @@ public class Main {
 
   public static void main(String[] args) {
     
-    double power = Math.pow(5, 3);
-    System.out.println(power);
+    Coin c = new Coin();
+    System.out.println("Initial: " + c.getFaceUp());
 
-    double squareRoot = Math.sqrt(64);
-    System.out.println(squareRoot);
+    for (int i = 0; i < 10; i++) {
+      c.flip();
+      System.out.println("After Flip: " + c.getFaceUp());
+    }
 
-    Random rand = new Random();
-    int randomNumber = rand.nextInt();
-    int randomNumberWithBound = rand.nextInt(10);
-    System.out.println(randomNumber);
-    System.out.println(randomNumberWithBound);
   }
 }
