@@ -1,28 +1,28 @@
 import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.concurrent.Future;
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
 
   public static void main(String[] args) {
-    Car myCar = new Car(25.5, "1BC32E", Color.BLUE, true);
+    System.out.println("Enter an age: ");
+    Scanner in = new Scanner(System.in);
+    int age = in.nextInt();
 
-    Car sallyCar = new Car(13.9, "3D20BN", Color.BLACK, false);
+    if (age >= 0 && age <= 5) {
+      System.out.println("Baby");
+    } else if (age >= 6 && age <= 11) {
+      System.out.println("Kid");
+    } else if (age >= 12 && age <= 17) {
+      System.out.println("Teen");
+    } else if (age >= 8) {
+      System.out.println("Adult");
+    } else {
+      System.out.println("Invalid");
+    }
 
-    double myCarSpeed = 50;
-    myCarSpeed = myCar.speedingUp(myCarSpeed);
-    
-    // System.out.println(myCarSpeed);
-
-   Dog d = new Dog("Doug", 3);
-
-   d.bark();
-
-   int dogYears = d.getDogYears();
-   System.out.println(dogYears + " dog years.");
-
-   d.fetch();
-   d.fetch();
-   d.fetch();
-   d.fetch();
-
+    System.out.println("Thanks for using this program!");
   }
 }
