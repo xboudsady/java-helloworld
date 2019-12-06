@@ -7,22 +7,16 @@ import java.util.Arrays;
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println("Enter an age: ");
-    Scanner in = new Scanner(System.in);
-    int age = in.nextInt();
-
-    if (age >= 0 && age <= 5) {
-      System.out.println("Baby");
-    } else if (age >= 6 && age <= 11) {
-      System.out.println("Kid");
-    } else if (age >= 12 && age <= 17) {
-      System.out.println("Teen");
-    } else if (age >= 8) {
-      System.out.println("Adult");
-    } else {
-      System.out.println("Invalid");
+    
+    // WHILE LOOP
+    System.out.println("While Loop");
+    int x = 3;
+    while (x > 0) {
+      System.out.println("Current x: " + x);
+      x = x - 1;
     }
+    System.out.println("Final x: " + x);
+    System.out.println();
 
-    System.out.println("Thanks for using this program!");
   }
 }
